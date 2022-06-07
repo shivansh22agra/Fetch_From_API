@@ -17,52 +17,43 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// class HomePagee extends StatelessWidget {
-//   const HomePagee({Key? key}) : super(key: key);
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Center(
-//           child: Text(
-//             "Trending",
-//             style: TextStyle(color: Colors.black),
-//           ),
-//         ),
-//         backgroundColor: Colors.white,
-//       ),
-//       body: OfflineBuilder(
-//         connectivityBuilder: (
-//           BuildContext context,
-//           ConnectivityResult connectivity,
-//           Widget child,
-//         ) {
-//           final bool connected = connectivity != ConnectivityResult.none;
-//           return Stack(
-//             fit: StackFit.expand,
-//             children: [
-//               Positioned(
-//                 height: 24.0,
-//                 left: 0.0,
-//                 right: 0.0,
-//                 child: Container(
-//                   child: Center(
-//                     child: Text("${connected ? 'ONLINE' : 'OFFLINE'}")
-//                   ),
-//                 ),
-//               )
-//             ],
-//           );
-            
-//           // return Stack(
-//           //    connected
-//           //    ? Navigator.push(
-//           //         context, MaterialPageRoute(builder: (context) => HomePage()))
-//           //     : Center(child: Text("check your internet")));
-//         },
-        
-//       ),
-//     );
-//   }
-// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
