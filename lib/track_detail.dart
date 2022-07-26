@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class track_detail extends StatefulWidget {
-  const track_detail({
-    Key? key,
-  }) : super(key: key);
+  // const track_detail({
+  //   Key? key,
+  // }) : super(key: key);
 
   @override
   State<track_detail> createState() => _track_detailState();
@@ -16,7 +16,7 @@ class track_detail extends StatefulWidget {
 class _track_detailState extends State<track_detail> {
   var api =
       "https://api.musixmatch.com/ws/1.1/chart.tracks.get?apikey=41dfb5efbf3bb10693aeabd4e355d7a1";
-  var res, data;
+  var res, data,tracks,lyric;
   var lyrics =
       "https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=161013321&apikey=2d782bc7a52a41ba2fc1ef05b9cf40d7";
   var response, dataa;
@@ -29,19 +29,20 @@ class _track_detailState extends State<track_detail> {
     fetchData();
   }
 
-  fetchData() async {
+  void fetchData() async {
     res = await http.get(Uri.parse(api));
     response = await http.get(Uri.parse(lyrics));
     dataa = jsonDecode(response.body);
     data = jsonDecode(res.body);
     //print(data["message"]["body"]["track_list"][0]["track"]["track_name"]);
     setState(() {});
+      tracks = data["message"]["body"]["track_list"];
+    lyric = dataa["message"]["body"];
+
   }
 
   Widget build(BuildContext context) {
-    var tracks = data["message"]["body"]["track_list"];
-    var lyric = dataa["message"]["body"];
-
+   
     return Scaffold(
       appBar: AppBar(
         title: Text(
