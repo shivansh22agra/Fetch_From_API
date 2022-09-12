@@ -1,6 +1,6 @@
 import 'dart:convert';
 
-import 'package:api_music/track_detail.dart';
+
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
       "https://api.stockedge.com/Api/SecurityDashboardApi/GetTechnicalPerformanceBenchmarkForSecurity/5051?lang=en";
   var api =
       "https://api.stockedge.com/Api/SecurityDashboardApi/GetCompanyEquityInfoForSecurity/5051?lang=en";
-  // "https://api.musixmatch.com/ws/1.1/chart.tracks.get?apikey=41dfb5efbf3bb10693aeabd4e355d7a1";
+  
   var res;
   var data;
   var data1;
